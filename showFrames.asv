@@ -1,0 +1,21 @@
+function  showFrames( from, to, nCols, nRows )
+%SHOWFRAMES show frames from to
+
+ v = VideoReader('C:\Users\fred_\Videos\RUSH.Title13.mp4');
+ switch nargin
+     case 1
+        to = from + 1;
+        
+ end
+
+ len = to - from + 1;
+ v.CurrentTime = frame2time(from);
+ for n = 1:len
+     frame = readFrame(v);
+     subplot(1,len,n)
+     imshow(frame);
+     title(from + n - 1);
+ end
+    
+end
+

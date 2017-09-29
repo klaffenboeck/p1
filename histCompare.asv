@@ -1,0 +1,13 @@
+function [ value, total_distance ] = histCompare( histList, method, pos1, pos2 )
+%HISTCOMPARE Compare two histograms from a list with a specified method
+
+if strcmpi(method,'hi')
+    value = histIntersect(histList(pos1,:),histList(pos2,:));
+elseif strcmpi(method,'emd')
+    value = emd(histList(pos1,:),histList(pos2,:));
+    
+end
+
+
+end
+

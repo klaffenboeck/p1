@@ -1,0 +1,18 @@
+hr = csvread('RushRed0Hist60000.csv');
+hg = csvread('RushGreen0Hist60000.csv');
+hb = csvread('RushBlue0Hist60000.csv');
+hi = csvread('RushGray0Hist60000.csv');
+hc = csvread('RushColHist60000.csv');
+
+histLists = {hi, hr, hg, hb, hc}; 
+
+s = 60000;
+
+results = {zeros(s-1,1),zeros(s-1,1),zeros(s-1,1),zeros(s-1,1),zeros(s-1,1)};
+for i = 2:s
+    for j = 1:5
+        res = results{j};
+        histList = 
+    end
+end
+
